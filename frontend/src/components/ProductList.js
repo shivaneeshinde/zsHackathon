@@ -38,28 +38,31 @@ class ProductList extends React.Component {
         return (
           <tr key={user.product_id}>
             <td style={{ verticalAlign: "middle" }}>
-              <div className="ui label">{user.product_id}</div>
+              <div className="ui label">{user.productId}</div>
+            </td>
+            <td style={{ verticalAlign: "middle" }}>
+              <div className="ui label">{user.productName}</div>
+            </td>
+            <td style={{ verticalAlign: "middle" }}>
+              <div className="ui label">{user.details}</div>
             </td>
             <td
               style={{ width: "400px" }}
-              onClick={() => this.openUserModel(user.product_id)}
+              onClick={() => this.openUserModel(user.productId)}
             >
               <div className="ui segment" style={{ cursor: "pointer" }}>
                 <h4 className="ui image header">
                   <img
-                    src={user.image_url}
+                    src={user.imageUrl}
                     className="ui mini rounded image"
-                    alt={user.image_url}
+                    alt={user.imageUrl}
                   />
                   <div className="content">
                     {user.product_name}
-                    <div className="sub header">{user.product_name}</div>
+                    <div className="sub header">{user.productName}</div>
                   </div>
                 </h4>
               </div>
-            </td>
-            <td style={{ verticalAlign: "middle" }}>
-              <div className="ui label">{user.product_name}</div>
             </td>
             <td style={{ verticalAlign: "middle" }}>
               <div className="ui label">{user.price}</div>
