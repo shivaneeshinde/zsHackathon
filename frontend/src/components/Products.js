@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-class User extends React.Component {
+class Products extends React.Component {
   state = { name: "", email: "", mobile: "", role: "Employee" };
 
   async componentDidMount() {
@@ -55,7 +55,7 @@ class User extends React.Component {
       if (response.status === 201) {
         this.props.closeUserModal(true);
         this.setState({ name: "", email: "", mobile: "", role: "Employee" });
-        toast.success("User created successfully", {
+        toast.success("Product added successfully", {
           position: toast.POSITION.TOP_CENTER,
         });
       }
@@ -80,46 +80,44 @@ class User extends React.Component {
         >
           <form className="ui form">
             <div className="field">
-              <label>Name</label>
+              <label>Product Name</label>
               <input
                 type="text"
-                name="name"
-                placeholder="Enter Employee Full Name"
+                name="Product Name"
+                placeholder="Enter Product Name"
                 onChange={(e) => this.onFormChange(e)}
                 value={this.state.name}
               />
             </div>
             <div className="field">
-              <label>Email</label>
+              <label>Price</label>
               <input
                 type="text"
-                name="email"
-                placeholder="Enter Employee Email"
+                name="Price"
+                placeholder="Enter Product Price"
                 onChange={(e) => this.onFormChange(e)}
-                value={this.state.email}
+                value={this.state.price}
               />
             </div>
             <div className="field">
-              <label>Mobile</label>
+              <label>Product Image URL</label>
               <input
                 type="text"
-                name="mobile"
-                placeholder="Enter Employee Phone number"
+                name="url"
+                placeholder="Enter Product Image URL"
                 onChange={(e) => this.onFormChange(e)}
-                value={this.state.mobile}
+                value={this.state.url}
               />
             </div>
             <div className="field">
-              <label>Role</label>
-              <select
-                value={this.state.role}
+              <label>Product Detail</label>
+              <input
+                type="text"
+                name="detail"
+                placeholder="Enter Product Detail"
                 onChange={(e) => this.onFormChange(e)}
-                name="role"
-              >
-                <option value="Employee">Employee</option>
-                <option value="Manager">Manager</option>
-                <option value="Admin">Admin</option>
-              </select>
+                value={this.state.detail}
+              />
             </div>
             <div style={{ textAlign: "center" }}>
               <button
@@ -143,4 +141,4 @@ class User extends React.Component {
   }
 }
 
-export default User;
+export default Products;

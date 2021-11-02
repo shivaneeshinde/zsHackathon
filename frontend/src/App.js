@@ -3,23 +3,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Home from "./components/Home";
-import UserList from "./components/UserList";
-import TeamList from "./components/teams/TeamList";
-import Meeting from "./components/Meeting";
-import Login from "./components/Login";
-import DiscussionList from "./components/DiscussionList";
+import ProductList from "./components/ProductList";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
-  const userName = JSON.parse(sessionStorage.getItem("name"));
-  const tokenString = sessionStorage.getItem("token");
-  const token = JSON.parse(tokenString);
-
-  if (!token) {
-    return <Login />;
-  }
-
   return (
     <div
       style={{ marginLeft: "300px", marginTop: "50px", marginRight: "50px" }}
@@ -41,7 +29,7 @@ function App() {
               style={{ color: "white", fontWeight: "bold" }}
             >
               Welcome!
-              <p>{userName}</p>
+              <p>Buyer</p>
             </div>
             <Link
               to="/home"
@@ -52,64 +40,20 @@ function App() {
               Home
             </Link>
             <Link
-              to="/users"
+              to="/products"
               className="ui inverted button"
               style={{ width: "150px", marginTop: "10px" }}
             >
               <i className="user icon" />
-              Users
-            </Link>
-            <Link
-              to="/teams"
-              className="ui inverted button"
-              style={{ width: "150px", marginTop: "10px" }}
-            >
-              <i className="users icon" />
-              Teams
-            </Link>
-            <Link
-              to="/discussions"
-              className="ui inverted button"
-              style={{ width: "150px", marginTop: "10px" }}
-            >
-              <i className="users icon" />
-              Discussions
-            </Link>
-            <Link
-              to="/meetings"
-              className="ui inverted button"
-              style={{ width: "150px", marginTop: "10px" }}
-            >
-              <i className="users icon" />
-              Meetings
-            </Link>
-            <Link
-              className="ui inverted button"
-              onClick={() => {
-                sessionStorage.clear();
-                window.location.pathname = "/";
-              }}
-              style={{ width: "150px", marginTop: "10px", float: "bottom" }}
-            >
-              <i className="sign-out icon" />
-              Logout
+              Products
             </Link>
           </div>
           <Switch>
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/users">
-              <UserList />
-            </Route>
-            <Route path="/teams">
-              <TeamList />
-            </Route>
-            <Route path="/discussions">
-              <DiscussionList />
-            </Route>
-            <Route path="/meetings">
-              <Meeting />
+            <Route path="/products">
+              <ProductList />
             </Route>
           </Switch>
         </div>
