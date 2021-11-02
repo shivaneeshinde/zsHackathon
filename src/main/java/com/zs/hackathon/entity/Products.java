@@ -20,13 +20,13 @@ public class Products {
 
 	@Id
 	@Column(name = "product_id")
-	private int product_id;
+	private int productId;
 
 	@Column(name = "product_name")
-	private String product_name;
+	private String productName;
 
 	@Column(name = "image_url")
-	private String image_url;
+	private String imageUrl;
 
 	@Column(name = "details")
 	private String details;
@@ -34,44 +34,42 @@ public class Products {
 	@Column(name = "price")
 	private String price;
 	
-	
-
 	public Products() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Products(int product_id, String product_name, String image_url, String details, String price) {
+	public Products(int productId, String productName, String imageUrl, String details, String price) {
 		super();
-		this.product_id = product_id;
-		this.product_name = product_name;
-		this.image_url = image_url;
+		this.productId = productId;
+		this.productName = productName;
+		this.imageUrl = imageUrl;
 		this.details = details;
 		this.price = price;
 	}
 
-	public int getProduct_id() {
-		return product_id;
+	public int getProductId() {
+		return productId;
 	}
 
-	public void setProduct_id(int product_id) {
-		this.product_id = product_id;
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
 
-	public String getProduct_name() {
-		return product_name;
+	public String getProductName() {
+		return productName;
 	}
 
-	public void setProduct_name(String product_name) {
-		this.product_name = product_name;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 
-	public String getImage_url() {
-		return image_url;
+	public String getImageUrl() {
+		return imageUrl;
 	}
 
-	public void setImage_url(String image_url) {
-		this.image_url = image_url;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public String getDetails() {
@@ -92,8 +90,8 @@ public class Products {
 
 	@Override
 	public String toString() {
-		return "Products [product_id=" + product_id + ", product_name=" + product_name + ", image_url=" + image_url
+		return "Products [productId=" + productId + ", productName=" + productName + ", imageUrl=" + imageUrl
 				+ ", details=" + details + ", price=" + price + "]";
 	}
-	
+		
 }
