@@ -11,7 +11,7 @@
 	<groupId>com.zs.hackathon</groupId>
 	<artifactId>rockadventures</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rockadventures</name>
+	<name>zsHackathon</name>
 	<description>Hackathon Project of ZS</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -91,7 +91,7 @@
 					<artifactId>frontend-maven-plugin</artifactId>
 					<version>1.6</version>
 					<configuration>
-							<workingDirectory>srafrontend</workingDirectory>
+							<workingDirectory>frontend</workingDirectory>
 							<installDirectory>target</installDirectory>
 					</configuration>
 					<executions>
@@ -151,7 +151,7 @@
 								<configuration>
 										<target>
 												<copy todir="${project.build.directory}/classes/public">
-														<fileset dir="${project.basedir}/srafrontend/build"/>
+														<fileset dir="${project.basedir}/frontend/build"/>
 												</copy>
 										</target>
 								</configuration>
