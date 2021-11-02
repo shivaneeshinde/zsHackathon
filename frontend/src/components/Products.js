@@ -54,7 +54,7 @@ class Products extends React.Component {
       );
       if (response.status === 201) {
         this.props.closeUserModal(true);
-        this.setState({ name: "", email: "", mobile: "", role: "Employee" });
+        this.setState({ productName: "", imageUrl: "", details: "", price: "" });
         toast.success("Product added successfully", {
           position: toast.POSITION.TOP_CENTER,
         });
@@ -86,7 +86,7 @@ class Products extends React.Component {
                 name="Product Name"
                 placeholder="Enter Product Name"
                 onChange={(e) => this.onFormChange(e)}
-                value={this.state.name}
+                value={this.state.productName}
               />
             </div>
             <div className="field">
@@ -106,7 +106,7 @@ class Products extends React.Component {
                 name="url"
                 placeholder="Enter Product Image URL"
                 onChange={(e) => this.onFormChange(e)}
-                value={this.state.url}
+                value={this.state.imageUrl}
               />
             </div>
             <div className="field">
@@ -116,7 +116,7 @@ class Products extends React.Component {
                 name="detail"
                 placeholder="Enter Product Detail"
                 onChange={(e) => this.onFormChange(e)}
-                value={this.state.detail}
+                value={this.state.details}
               />
             </div>
             <div style={{ textAlign: "center" }}>
