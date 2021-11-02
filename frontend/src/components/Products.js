@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 class Products extends React.Component {
-  state = { property: "", imageUrl: "", details: "", price: "" };
+  state = { productName: "", imageUrl: "", details: "", price: "" };
 
   async componentDidMount() {
     if (this.props.editUser) {
