@@ -3,18 +3,18 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 class Products extends React.Component {
-  state = { name: "", email: "", mobile: "", role: "Employee" };
+  state = { property: "", imageUrl: "", details: "", price: "" };
 
   async componentDidMount() {
     if (this.props.editUser) {
       const response = await axios.get(
-        `https://608d1c869f42b20017c3e804.mockapi.io/api/users/${this.props.editUser}`
+        `https://zshackathon.herokuapp.com/addProduct/${this.props.editUser}`
       );
       this.setState({
-        name: response.data.name,
-        email: response.data.email,
-        mobile: response.data.mobile,
-        role: response.data.role,
+        productName: this.state.productName,
+        imageUrl: this.state.imageUrl,
+        details: this.state.details,
+        price: this.state.price,
       });
     }
   }
@@ -27,29 +27,29 @@ class Products extends React.Component {
     e.preventDefault();
     if (this.props.editUser) {
       const response = await axios.put(
-        `https://608d1c869f42b20017c3e804.mockapi.io/api/users/${this.props.editUser}`,
+        `https://zshackathon.herokuapp.com/addProduct/${this.props.editUser}`,
         {
-          name: this.state.name,
-          email: this.state.email,
-          mobile: this.state.mobile,
-          role: this.state.role,
+          productName: this.state.productName,
+          imageUrl: this.state.imageUrl,
+          details: this.state.details,
+          price: this.state.price,
         }
       );
       if (response.status === 200) {
         this.props.closeUserModal(true);
-        this.setState({ name: "", email: "", mobile: "", role: "Employee" });
-        toast.success("User updated successfully", {
+        this.setState({ productName: "", imageUrl: "", details: "", price: "" });
+        toast.success("Product updated successfully", {
           position: toast.POSITION.TOP_CENTER,
         });
       }
     } else {
       const response = await axios.post(
-        "https://608d1c869f42b20017c3e804.mockapi.io/api/users",
+        "https://zshackathon.herokuapp.com/addProduct",
         {
-          name: this.state.name,
-          email: this.state.email,
-          mobile: this.state.mobile,
-          role: this.state.role,
+          productName: this.state.productName,
+          imageUrl: this.state.imageUrl,
+          details: this.state.details,
+          price: this.state.price,
         }
       );
       if (response.status === 201) {
