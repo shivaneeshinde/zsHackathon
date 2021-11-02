@@ -1,4 +1,4 @@
-package com.happy.workplace.service;
+package com.zs.hackathon.service;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import com.happy.workplace.entity.Login;
-import com.happy.workplace.entity.Users;
-import com.happy.workplace.exception.ResourceNotFoundException;
-import com.happy.workplace.repository.UserRepository;
+import com.zs.hackathon.entity.Login;
+import com.zs.hackathon.entity.Users;
+import com.zs.hackathon.exception.ResourceNotFoundException;
+import com.zs.hackathon.repository.UserRepository;
 
 @Service
 @Transactional

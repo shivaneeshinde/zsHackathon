@@ -1,4 +1,4 @@
-package com.happy.workplace.exception;
+package com.zs.hackathon.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

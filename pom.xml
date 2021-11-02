@@ -8,14 +8,15 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.happy</groupId>
-	<artifactId>workplace</artifactId>
+	<groupId>com.zs.hackathon</groupId>
+	<artifactId>rockadventures</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>workplace</name>
-	<description>Demo project for Spring Boot</description>
+	<name>rockadventures</name>
+	<description>Hackathon Project of ZS</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -90,7 +91,7 @@
 					<artifactId>frontend-maven-plugin</artifactId>
 					<version>1.6</version>
 					<configuration>
-							<workingDirectory>frontend</workingDirectory>
+							<workingDirectory>srafrontend</workingDirectory>
 							<installDirectory>target</installDirectory>
 					</configuration>
 					<executions>
@@ -113,6 +114,15 @@
 											<arguments>install</arguments>
 									</configuration>
 							</execution>
+						        <!-- <execution>
+									<id>npm install react-router-dom</id>
+									<goals>
+											<goal>npm</goal>
+									</goals>
+									<configuration>
+											<arguments>install react-router-dom</arguments>
+									</configuration>
+							</execution> -->
 							<execution>
 									<id>npm run build</id>
 									<goals>
@@ -121,7 +131,16 @@
 									<configuration>
 											<arguments>run build</arguments>
 									</configuration>
-							</execution>
+							</execution>		
+							<!--<execution>
+									<id>npm start</id>
+									<goals>
+											<goal>npm</goal>
+									</goals>
+									<configuration>
+											<arguments>start</arguments>
+									</configuration>
+							</execution>-->
 					</executions>
 			</plugin>
 			<plugin>
@@ -132,7 +151,7 @@
 								<configuration>
 										<target>
 												<copy todir="${project.build.directory}/classes/public">
-														<fileset dir="${project.basedir}/frontend/build"/>
+														<fileset dir="${project.basedir}/srafrontend/build"/>
 												</copy>
 										</target>
 								</configuration>

@@ -1,4 +1,4 @@
-package com.happy.workplace.entity;
+package com.zs.hackathon.entity;
 
 import java.util.Date;
 

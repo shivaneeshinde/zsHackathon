@@ -1,4 +1,4 @@
-package com.happy.workplace.entity;
+package com.zs.hackathon.entity;
 
 public class Login {
 	private String emailId;

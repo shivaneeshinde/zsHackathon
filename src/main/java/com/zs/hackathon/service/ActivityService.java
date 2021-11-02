@@ -1,4 +1,4 @@
-package com.happy.workplace.service;
+package com.zs.hackathon.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import com.happy.workplace.entity.Activities_Scheduled;
-import com.happy.workplace.repository.ActivityRepository;
+import com.zs.hackathon.entity.Activities_Scheduled;
+import com.zs.hackathon.repository.ActivityRepository;
 
 @Service
 @Transactional

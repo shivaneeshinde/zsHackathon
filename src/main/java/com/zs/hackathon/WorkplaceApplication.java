@@ -1,4 +1,4 @@
-package com.happy.workplace;
+package com.zs.hackathon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

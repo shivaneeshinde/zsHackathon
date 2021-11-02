@@ -1,4 +1,4 @@
-package com.happy.workplace.controller;
+package com.zs.hackathon.controller;
 
 import java.util.Base64;
 import java.util.List;
@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.happy.workplace.entity.Activities_Scheduled;
-import com.happy.workplace.entity.Discussions;
-import com.happy.workplace.entity.Event_Type;
-import com.happy.workplace.entity.Login;
-import com.happy.workplace.entity.Teams;
-import com.happy.workplace.entity.Users;
-import com.happy.workplace.exception.ResourceNotFoundException;
-import com.happy.workplace.service.ActivityService;
-import com.happy.workplace.service.DiscussionsService;
-import com.happy.workplace.service.EventService;
-import com.happy.workplace.service.TeamsService;
-import com.happy.workplace.service.UserService;
+import com.zs.hackathon.entity.Activities_Scheduled;
+import com.zs.hackathon.entity.Discussions;
+import com.zs.hackathon.entity.Event_Type;
+import com.zs.hackathon.entity.Login;
+import com.zs.hackathon.entity.Teams;
+import com.zs.hackathon.entity.Users;
+import com.zs.hackathon.exception.ResourceNotFoundException;
+import com.zs.hackathon.service.ActivityService;
+import com.zs.hackathon.service.DiscussionsService;
+import com.zs.hackathon.service.EventService;
+import com.zs.hackathon.service.TeamsService;
+import com.zs.hackathon.service.UserService;
 
 
 @CrossOrigin(origins = "http://happyworkplace.herokuapp.com")
