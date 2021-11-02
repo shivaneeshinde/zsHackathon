@@ -37,6 +37,9 @@ class ProductList extends React.Component {
       this.state.users.map((user) => {
         return (
           <tr key={user.product_id}>
+            <td style={{ verticalAlign: "middle" }}>
+              <div className="ui label">{user.product_id}</div>
+            </td>
             <td
               style={{ width: "400px" }}
               onClick={() => this.openUserModel(user.product_id)}
@@ -54,6 +57,9 @@ class ProductList extends React.Component {
                   </div>
                 </h4>
               </div>
+            </td>
+            <td style={{ verticalAlign: "middle" }}>
+              <div className="ui label">{user.product_name}</div>
             </td>
             <td style={{ verticalAlign: "middle" }}>
               <div className="ui label">{user.price}</div>
