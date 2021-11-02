@@ -9,7 +9,7 @@ class ProductList extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "http://localhost:8080/productList"
+      "https://zshackathon.herokuapp.com//productList"
     );
     this.setState({ users: response.data.reverse() });
   }
@@ -24,7 +24,7 @@ class ProductList extends React.Component {
   closeUserModal = async (refresh = null) => {
     if (refresh) {
       const response = await axios.get(
-        "http://localhost:8080/productList"
+        "https://zshackathon.herokuapp.com/productList"
       );
       this.setState({ users: response.data.reverse() });
     }

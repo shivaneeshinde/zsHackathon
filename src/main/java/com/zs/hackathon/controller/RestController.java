@@ -19,7 +19,7 @@ import com.zs.hackathon.service.ProductService;
 import com.zs.hackathon.service.UserService;
 
 
-@CrossOrigin(origins = "http://happyworkplace.herokuapp.com")
+@CrossOrigin(origins = "https://zshackathon.herokuapp.com/")
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 
