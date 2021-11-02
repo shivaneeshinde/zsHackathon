@@ -38,9 +38,6 @@ class ProductList extends React.Component {
         return (
           <tr key={user.product_id}>
             <td style={{ verticalAlign: "middle" }}>
-              <div className="ui label">{user.productId}</div>
-            </td>
-            <td style={{ verticalAlign: "middle" }}>
               <div className="ui label">{user.productName}</div>
             </td>
             <td style={{ verticalAlign: "middle" }}>
@@ -85,7 +82,6 @@ class ProductList extends React.Component {
           <table className="ui table" style={{ width: "520px" }}>
             <thead>
               <tr>
-                <th style={{ paddingLeft: "60px" }}>Product ID</th>
                 <th style={{ paddingLeft: "60px" }}>Product Name</th>
                 <th style={{ paddingLeft: "20px" }}>Product Details</th>
                 <th style={{ paddingLeft: "60px" }}>Product Image</th>
